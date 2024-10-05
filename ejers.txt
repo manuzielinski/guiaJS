@@ -1,0 +1,24 @@
+// ejercicio 3
+
+
+let i = 0;
+let sueldosMayores = 0;
+let sueldosMenores = 0;
+let totalSueldos = 0;
+while (i < 5) {
+    let sueldos = Number(prompt("ingrese los sueldos de los empleados (entre 100 y 500)"));
+    if (sueldos < 100 && sueldos > 500) {
+        document.write("los sueldos eran entre 100 y 500 burroo");
+    }else if (sueldos <= 300) {
+        sueldosMenores++;
+        i++;
+    }else {
+        notasMenores++;
+        i++;
+    }
+    totalSueldos += sueldos;
+}
+
+document.write("La cantidad de empleados con sueldos menores a 300 es: " + sueldosMenores);
+document.write("<br>La cantidad de empleados con sueldos mayores a 300 es: " + sueldosMayores);
+document.write("<br>La cantidad total que gasta la empresa en sus empleados es: " + totalSueldos);
