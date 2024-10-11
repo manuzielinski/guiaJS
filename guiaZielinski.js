@@ -81,6 +81,31 @@ if(clave1 == clave2) {
     document.write("las claves son diferentes! :)");
 }
 
+// ejercicio 3
+
+
+let i = 0;
+let sueldosMayores = 0;
+let sueldosMenores = 0;
+let totalSueldos = 0;
+while (i < 5) {
+    let sueldos = Number(prompt("ingrese los sueldos de los empleados (entre 100 y 500)"));
+    if (sueldos < 100 && sueldos > 500) {
+        document.write("los sueldos eran entre 100 y 500 burroo");
+    }else if (sueldos <= 300) {
+        sueldosMenores++;
+        i++;
+    }else {
+        notasMenores++;
+        i++;
+    }
+    totalSueldos += sueldos;
+}
+
+document.write("La cantidad de empleados con sueldos menores a 300 es: " + sueldosMenores);
+document.write("<br>La cantidad de empleados con sueldos mayores a 300 es: " + sueldosMayores);
+document.write("<br>La cantidad total que gasta la empresa en sus empleados es: " + totalSueldos);
+
 
 // Estructuras condicionales compuestas, ejercicio 1
 
@@ -214,7 +239,220 @@ if (sueldo < 500 && antiguedad >= 10) {
 
 
 
+// ejercicio 4
 
+
+let i = 0;
+let terminos = 0;
+while (i < 20) {
+    terminos += 5;
+    i++;
+    document.write("<br>" + terminos)
+}
+
+// ejercicio 5
+
+
+let terminoss = 0;
+while (terminoss < 1500) {
+    terminoss += 10;
+    document.write(" " + terminoss)
+}
+
+// ejercicio 6
+let elementos1 = [];
+let elementos2 = [];
+let contador;
+
+for (let i = 0; i < 3; i++) {
+    let nuevoElemento = prompt("ingrese los elementos");
+    contador = nuevoElemento;
+    elementos1.push(nuevoElemento);
+}
+
+for (let i = 0; i < 3; i++) {
+    let nuevoElemento2 = prompt("ingrese los elementos 2");
+    contador2 += nuevoElemento2;
+    elementos2.push(nuevoElemento2);
+}
+
+
+document.write(elementos1);
+document.write("<br>" + elementos2);
+
+if(contador > contador2) {
+    document.write("<br> Lista 1 mayor");
+} else if (contador < contador2) {
+    document.write("<br> Lista 2 mayor");
+} else {
+    document.write("<br> Listas iguales");
+}
+
+// ejercicio 7
+
+for (let i = 0; i < 5; i++) {
+    let elementos = Number(prompt("ingrese 5 elementos"));
+    if (elementos % 2 != 0) {
+        document.write("el numero es impar: " + elementos + "<br>");
+    } else {
+        document.write("el numero es par: " + elementos + "<br>");
+    }
+}
+
+
+// ejercicios estructuras repetitivas DO WHILE 1
+
+let acumulador = 0;
+let numero = 0;
+
+while (numero != 9999) {
+    numero = Number(prompt("ingrese los valores"));
+
+    if (numero === 9999) {
+        break;
+    }
+    acumulador += numero;
+    document.write("la suma de los valores es: " + acumulador);
+
+    if (acumulador === 0) {
+        document.write("<br>el valor es 0");
+    } else if (acumulador < 0) {
+        document.write("<br>el valor es negativo");
+    } else {
+        document.write("<br>el valor es positivo");
+    }
+} 
+
+
+
+// ejercicios estructuras repetitivas DO WHILE 2
+
+let numeroCuenta;
+let numeroCliete;
+let saldoActual = 0;
+
+do {
+    numeroCuenta = Number(prompt("ingrese su numero de cuenta"));
+    
+    if (numeroCuenta < 0 ) {
+        break;
+    }
+
+    numeroCliente = Number(prompt("ingrese su numero de cliente"));
+    saldoActual = Number(prompt("ingrese su saldo"));
+
+    if (saldoActual === 0) {
+        document.write("Estado de la cuenta: nulo");
+    } else if (saldoActual > 0) {
+        document.write("Estado de la cuenta: acteedor");
+    } else {
+        document.write("Estado de la cuenta: deudor");
+    }
+
+} while (numero > 0);
+
+
+
+
+// ejercicio 1 bucle for
+
+let altura;
+let base;
+var contadorSuperficie = 0;
+
+for (i = 0; i < 3; i++) {
+    altura = Number(prompt("alturas: "));
+    base = Number(prompt("base: "));
+
+    let superficie = base * altura;
+
+    document.write("<br>la altura es: " + altura);
+    document.write("<br>la base es: " + base);
+    document.write("<br>la superficie es: " + superficie);
+
+    if (superficie > 12) {
+        contadorSuperficie ++;
+    }
+    
+    document.write("<br>");
+}
+
+document.write("<br>La cantidad de triangulos con una superficie mayor a 12 es: " + contadorSuperficie);
+
+
+// ejercicio 2 bucle for
+
+for (let i = 0; i < 10; i++) {
+    valores = Number(prompt("Ingrese 10 valores: "));
+
+    if (i >= 5) {
+        document.write(valores);
+    }
+}
+
+
+// ejercicio 3 for
+
+for (var i = 0; i < 11; i++) {
+    document.write("<br>" + 5 * i);
+}
+
+
+// ejercicio 4 for
+let valor = Number(prompt("ingrese un valor del 1 al 10"));
+
+for (var i = 0; i < 13; i++) {
+
+    document.write("<br>" + valor * i);
+}
+
+
+// ejercicio 5 for
+
+var contadorEquilatero = 0;
+var contadorIsosceles = 0;
+var contadorEscaleno = 0;
+
+for (let i = 0; i < 4; i++) {
+    let lado1 = Number(prompt("ingrese lado 1: "));
+    let lado2 = Number(prompt("ingrese lado 2: "));
+    let lado3 = Number(prompt("ingrese lado 3: "));
+
+    if (lado1 === lado2 && lado3 === lado1) {
+        contadorEquilatero ++;
+    } else if (lado1 === lado2 || lado3 === lado1 || lado2 === lado3) {
+        contadorIsosceles ++;
+    } else {
+        contadorEscaleno ++;
+    }
+}
+
+document.write("El número de triángulos equiláteros es: " + contadorEquilatero + "<br>");
+
+document.write("El número de triángulos isósceles es: " + contadorIsosceles + "<br>");
+
+document.write("El número de triángulos escalenos es: " + contadorEscaleno + "<br>");
+
+
+// ejercicio 6 for
+
+var puntos = Number(prompt("ingrese la cantidad de puntos que desea analizar: "));
+
+for (var i = 0; i < puntos; i++) {
+    let x = Number(prompt("ingrese el punto en x: "));
+    let y = Number(prompt("ingrese el punto en y: "));
+
+    if (x < 0 && y > 0) {
+        document.write("<br>El punto se encuentra en el primer cuadrante: ");
+    } else if (x > 0 && y > 0) {
+        document.write("<br>El punto se encuentra en el segundo cuadrante: ");
+    } else if (x < 0 && y < 0) {
+        document.write("<br>El punto se encuentra en el tercer cuadrante: ");
+    } else {
+        document.write("<br>El punto se encuentra en el cuarto cuadrante: ");
+    }
+
+}
 
 
 
