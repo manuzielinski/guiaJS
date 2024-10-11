@@ -454,6 +454,162 @@ for (var i = 0; i < puntos; i++) {
 
 }
 
+// ejercicio 7 for
+
+let contadorVal = 0;
+let contadorValNeg = 0;
+let contadorMult = 0;
+
+let acumulador = 0;
+
+for (var i = 0; i < 10; i++) {
+    var valores = Number(prompt("ingrese los valores"));
+
+    if (valores > 0) {
+        contadorVal++; 
+    } else if (valores < 0) {
+        contadorValNeg++; 
+    }
+
+    if (valores % 2 === 0) {
+        acumulador += valores;
+    }
+
+    if (valores % 15 == 0) {
+        contadorMult++;
+    }
+}
+
+document.write("Cantidad de valores positivos: " + contadorVal + "<br>");
+
+document.write("Cantidad de valores negativos: " + contadorValNeg + "<br>");
+
+document.write("Cantidad de valores multiplos de 15: " + contadorMult + "<br>");
+
+document.write("Suma de valores pares: " + acumulador + "<br>");
+
+
+// ejercicio 1 functions
+
+let entero1 = Number(prompt("ingrese el primer entero"));
+let entero2 = Number(prompt("ingrese el segundo entero"));
+let entero3 = Number(prompt("ingrese el tercero entero"));
+
+function enteros(entero1, entero2, entero3) {
+    return Math.max(entero1, entero2, entero3);
+}
+
+document.write("El mayor de los numeros es: " + enteros(entero1, entero2, entero3));
+
+
+// ejercicio 2 functions
+
+let valor = Number(prompt("ingrese el valor del lado del cuadrado"));
+
+function calcularAreaCuadrado(valor) {
+    return valor * valor;
+}
+
+document.write("el area del cuadrado es: " + calcularAreaCuadrado(valor));
+
+
+// ejercicio 3 functions
+
+var valor = Number(prompt("Ingrese un valor de hasta 5 digitos"));
+
+if (valor > 100000) {
+    document.write("ingrese un valor de 5 digitos o menor...");
+} else {
+    
+    function enteros(valor){
+        return valor.toString().length;
+    }
+}
+
+document.write("La cantidad de caracteres es de: " + enteros(valor));
+
+
+// ejercicio 4 de functions
+
+var entero1 = Number(prompt("ingrese el primer entero"));
+var entero2 = Number(prompt("ingrese el segundo entero"));
+var entero3 = Number(prompt("ingrese el tercer entero"));
+
+function promedio (entero1, entero2, entero3) {
+    return (entero1 + entero2 + entero3) / 3;
+}
+
+document.write("El promedio es: " + promedio(entero1, entero2, entero3));
+
+// ejercicio 1 arrays
+
+let array = [];
+var contador = 0;
+var contador35 = 0;
+var contador50 = 0;
+
+function ejercicio(array) {
+    for (let i = 0; i < 8; i++) {
+        let valores = Number(prompt("ingrese los valores: "));
+        array.push(valores);
+
+        contador += valores;
+
+        if (valores > 50) {
+            contador50++;
+        } else if (valores > 36) {
+            contador36 += valores;
+        }
+    }
+    document.write("<br>La suma de todos los valores ingresados es: " + contador);
+    document.write("<br>El conjunto de datos es: " + array);
+}
+ejercicio(array);
+
+
+// ejercicio 2 array
+
+let array1 = [];
+let array2 = [];
+let sumaArray = [];
+
+var longitude = Number(prompt("ingrese la cantidad de datoss que tendra cada array"));
+
+for (let j = 0; j < longitude; j++) {
+    let valor = Number(prompt("ingrese un valor para insertar en el array1"));
+    array1.push(valor);
+}
+
+for (let j = 0; j < longitude; j++) {
+    let valor2 = Number(prompt("ingrese un valor para insertar en el array2"));
+    array2.push(valor2);
+}
+
+for (let i = 0; i < longitude; i++) {
+    sumaArray.push(array1[i] + array2[i]);
+}
+
+document.write(sumaArray);
+
+// ejercicio 1 clase math
+
+var valor = Number(prompt("ingrese el numero:  "));
+let resultado = Math.pow(valor, 3);
+
+document.write(resultado);
+
+
+// ejercicio 2 clase math
+
+var valor = Number(prompt("ingrese el numero:  "));
+let resultado = Math.sqrt(valor);
+
+document.write(resultado);
+
+
+
+
+
 
 
 
